@@ -1,9 +1,9 @@
 #Sistema_Rol
 
 
-##Instalación
+###Instalación
 
-_git clone  roles
+
 ```
 git clone roles
 ```
