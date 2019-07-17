@@ -1,15 +1,32 @@
 #Sistema_Rol
 
 
-Instalación
+##Instalación
 
--git clone  roles
+_git clone  roles
+```
+git clone roles
+```
+```
+cd roles
+```
+```
+composer install
+```
+```
+cp .env.example .env
+```
+```
+php artisan key:generate
+```
+_Agrega la info de la database en .env
 
--cd roles
--composer install
--cp .env.example .env
--php artisan key:generate
--Agrega la info de la database en .env
--php artisan migrate para migrar las tablass
--php artisan db:seed para crear los datps
--php artisan serve para empezar la app
+```
+php artisan migrate para migrar las tablass
+```
+```
+php artisan db:seed para crear los datps
+```
+```
+php artisan serve para empezar la app
+```
