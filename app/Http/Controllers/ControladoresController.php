@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use DB;
 
-class AumnoController extends Controller
+class ControladoresController extends Controller
 {
     public function buscador(Request $request){
 
@@ -50,7 +50,7 @@ class AumnoController extends Controller
                         mkdir($carpeta3, 0777, true); 
                 }
         }
-        return redirect('/')->with('mensaje', 'Actualización completada');
+        return redirect('/alumnos')->with('mensaje', 'Actualización completada');
 
     }
     public function detalleAlumno($matricula){

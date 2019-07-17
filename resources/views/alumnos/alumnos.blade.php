@@ -1,6 +1,7 @@
-@extends('layouts.master')
+@extends('plantilla')
 @section('seccion')
   <div class="page-content">
-     @include('buscador')
+   
+     @include('upload')
   </div>
 @stop

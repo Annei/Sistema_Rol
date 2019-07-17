@@ -10,23 +10,23 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'Controladores@index')->name('recibir');
-Route::post('/', 'Controladores@buscador')->name('buscador');
-Route::get('/detalleAlumno/{matricula?}', 'Controladores@detalleAlumno')->name('upload');
+Route::get('/alumnos/', 'ControladoresController@index')->name('recibir');
+Route::post('/alumnos', 'ControladoresController@buscador')->name('buscador');
+Route::get('/alumnos/detalleAlumno/{matricula?}', 'ControladoresController@detalleAlumno')->name('upload');
 
-Route::post('/a', 'Controladores@actualizar')->name('actualizar');
-Route::post('/store/{matricula?}','Controladores@store')->name('upload.file');
-Route::post('/store2/{matricula?}','Controladores@store2')->name('upload.file2');
-Route::post('/store3/{matricula?}','Controladores@store3')->name('upload.file3');
+Route::post('/alumnos/a', 'ControladoresController@actualizar')->name('actualizar');
+Route::post('/alumnos/store/{matricula?}','ControladoresController@store')->name('upload.file');
+Route::post('/alumnos/store2/{matricula?}','ControladoresController@store2')->name('upload.file2');
+Route::post('/alumnos/store3/{matricula?}','ControladoresController@store3')->name('upload.file3');
 
 //Route::get('/descarga/{name?}/{matricula?}', 'Controladores@descarga')->name('descarga');
-Route::get('/descarga/{name?}/{matricula?}', 'Controladores@descarga');
-Route::get('/descarga2/{name?}/{matricula?}', 'Controladores@descarga2');
-Route::get('/descarga3/{name?}/{matricula?}', 'Controladores@descarga3');
+Route::get('/alumnos/descarga/{name?}/{matricula?}', 'ControladoresController@descarga');
+Route::get('/alumnos/descarga2/{name?}/{matricula?}', 'ControladoresController@descarga2');
+Route::get('/alumnos/descarga3/{name?}/{matricula?}', 'ControladoresController@descarga3');
 
-Route::get('/delete/{name?}/{matricula?}', 'Controladores@deletefiles')->name('elimina');
-Route::get('/delete2/{name?}/{matricula?}', 'Controladores@deletefiles2')->name('elimina2');
-Route::get('/delete3/{name?}/{matricula?}', 'Controladores@deletefiles3')->name('elimina3');
+Route::get('/alumnos/delete/{name?}/{matricula?}', 'ControladoresController@deletefiles')->name('elimina');
+Route::get('/alumnos/delete2/{name?}/{matricula?}', 'ControladoresController@deletefiles2')->name('elimina2');
+Route::get('/alumnos/delete3/{name?}/{matricula?}', 'ControladoresController@deletefiles3')->name('elimina3');
 /* Route::get('/','Controladores@index2');
 Route::post('/store','Controladores@store')->name('upload.file');
 Route::get('/show','Controladores@show'); */
@@ -48,9 +48,13 @@ Route::group(['middleware' => ['role:super-admin|editor|moderador']], function()
    
 });
 
-Route::group(['middleware' => ['role:super-admin|editor|moderador']], function() {
+/**Route::group(['middleware' => ['role:super-admin|editor|moderador']], function() {
     Route::resource('alumnos', 'AumnoController');
    
 });
+Route::group(['middleware' => ['role:super-admin|editor|moderador']], function() {
+    Route::resource('alumnos', 'Controladores');
+   
+});*/
 
 
