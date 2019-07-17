@@ -1,6 +1,6 @@
 ### Instalación ###
 
-* `git clone https://github.com/karoys/laravel-native-roles-auth.git roles`
+* `git clone https://github.com/Annei/Sistema_Rol.git roles`
 * `cd roles`
 * `composer install`
 * `cp .env.example .env`
