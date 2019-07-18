@@ -8,8 +8,10 @@
     <title>Sistema de Archivos</title>
 </head>
 <body>
-        <h1 class="page-header text-center">Sistema de Archivos Digitales</h1>
-
+        <!--<h1 class="page-header text-center">Sistema de Archivos Digitales</h1>-->
+        
+       
+          
         <div class="container">
                 <div class="row">
                   <div class="col-sm-4">
@@ -52,8 +54,10 @@
                               <div class="card-header" id="headingOne">
                                 <h5 class="mb-0">
                                   <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Documentos Personales
+                                    <i class='fas fa-folder'></i>    Documentos Personales 
                                   </button>
+                                 
+
                                 </h5>
                               </div>
                           
@@ -92,16 +96,14 @@
                                                                 <td>
                                                                             <a href="/descarga/{{$file->name}}/{{$file->matriculaAlumn}}" download='{{$file->name}}'>
                                                                                 <button type="button" title="Descargar" class="btn btn-primary">
-                                                                                <i class="glyphicon glyphicon-download-alt">
-                                                                                
-                                                                                </i>
+                                                                                    <i class='fas fa-download'></i>
                                                                                 </button>
                                                                             </a>
                                                                            
                                                                             <a href="{{url('delete/'. $file->name .'/'.$info->matricula)}}" >
                              
                                                                                 <button type="submit" title="Eliminar"class="btn btn-danger">
-                                                                                <i class="glyphicon glyphicon-remove-circle"></i>
+                                                                                    <i class='fas fa-trash'></i></i>
                                                                                 </button>
                                                                             </a>
                                                             
@@ -129,7 +131,7 @@
                               <div class="card-header" id="headingTwo">
                                 <h5 class="mb-0">
                                   <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                   Boletas
+                                    <i class='fas fa-folder'></i>  Boletas
                                   </button>
                                 </h5>
                               </div>
@@ -169,16 +171,14 @@
                                                                 <td>
                                                                             <a href="/descarga2/{{$file->name}}/{{$file->matriculaAlumn}}" download='{{$file->name}}'>
                                                                                 <button type="button" title="Descargar" class="btn btn-primary">
-                                                                                <i class="glyphicon glyphicon-download-alt">
-                                                                                
-                                                                                </i>
+                                                                                    <i class='fas fa-download'></i>
                                                                                 </button>
                                                                             </a>
                                                                            
                                                                             <a href="{{url('delete2/'. $file->name .'/'.$info->matricula)}}" >
                              
-                                                                                <button type="submit" title="Eliminar"class="btn btn-danger">
-                                                                                <i class="glyphicon glyphicon-remove-circle"></i>
+                                                                                <button type="submit" sytle='font-size:14px' title="Eliminar"class="btn btn-danger">
+                                                                                    <i class='fas fa-trash'></i>
                                                                                 </button>
                                                                             </a>
                                                             
@@ -204,7 +204,7 @@
                               <div class="card-header" id="headingThree">
                                 <h5 class="mb-0">
                                   <button class="btn btn-link collapsed"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                   Documentos Oficiales
+                                    <i class='fas fa-folder'></i>   Documentos Oficiales
                                   </button>
                                 </h5>
                               </div>
@@ -242,18 +242,13 @@
                                                                 <td>{{ date('M d, Y h:i A', strtotime($file->created_at)) }}</td>
                                                                 <td>
                                                                             <a href="/descarga3/{{$file->name}}/{{$file->matriculaAlumn}}" download='{{$file->name}}'>
-                                                                                <button type="button" title="Descargar" class="btn btn-primary">
-                                                                                <i class="glyphicon glyphicon-download-alt">
-                                                                                
-                                                                                </i>
-                                                                                </button>
+                                                                                <i class='fas fa-download' style='font-size:20px;color:blue'></i>
                                                                             </a>
+                                                                            <a></a>
                                                                            
                                                                             <a href="{{url('delete3/'. $file->name .'/'.$info->matricula)}}" >
-                             
-                                                                                <button type="submit" title="Eliminar"class="btn btn-danger">
-                                                                                <i class="glyphicon glyphicon-remove-circle"></i>
-                                                                                </button>
+                                                                                <i class='fas fa-trash-alt' style='font-size:20px;color:red'></i>
+                                                                                
                                                                             </a>
                                                             
                                                                    

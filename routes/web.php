@@ -11,7 +11,7 @@
 |
 */
 Route::get('/alumnos/', 'ControladoresController@index')->name('recibir');
-Route::post('/alumnos', 'ControladoresController@buscador')->name('buscador');
+Route::post('/alumnos/', 'ControladoresController@buscador')->name('buscador');
 Route::get('/alumnos/detalleAlumno/{matricula?}', 'ControladoresController@detalleAlumno')->name('upload');
 
 Route::post('/alumnos/a', 'ControladoresController@actualizar')->name('actualizar');

@@ -86,12 +86,12 @@ class Controladores extends Controller
     
                         $filename = $info->matricula.'_'.$file->getClientOriginalName();
                         $filesize = $file->getClientSize();
-                        $file->storeAs('public/Documentos/'.$info->matricula. '/'.'Documentos_Personales/',$filename);
+                        $file->storeAs('app/public/Documentos/'.$info->matricula. '/'.'Documentos_Personales/',$filename);
                         $fileModel = new App\documentospersonales;
                         $fileModel->name = $filename;
                         $fileModel->size = $filesize;
                         $fileModel->matriculaalumn = $info->matricula;
-                        $fileModel->location = 'public/Documentos/'.$info->matricula. '/'.'Documentos_Personales/'.$filename;
+                        $fileModel->location = 'app/public/Documentos/'.$info->matricula. '/'.'Documentos_Personales/'.$filename;
                         
                 $fileModel->save();    		
             }
@@ -116,12 +116,12 @@ class Controladores extends Controller
                     
                         $filename = $info->matricula.'_'.$file->getClientOriginalName();
                         $filesize = $file->getClientSize();
-                        $file->storeAs('public/Documentos/'.$info->matricula. '/'.'Boletas/',$filename);
+                        $file->storeAs('../public/Documentos/'.$info->matricula. '/'.'Boletas/',$filename);
                         $fileModel = new App\boletas;
                         $fileModel->name = $filename;
                         $fileModel->size = $filesize;
                         $fileModel->matriculaalumn = $info->matricula;
-                        $fileModel->location = 'public/Documentos/'.$info->matricula. '/'.'Boletas/'.$filename;
+                        $fileModel->location = '../public/Documentos/'.$info->matricula. '/'.'Boletas/'.$filename;
                         
                     
                    
@@ -149,12 +149,12 @@ class Controladores extends Controller
                     
                         $filename = $info->matricula.'_'.$file->getClientOriginalName();
                         $filesize = $file->getClientSize();
-                        $file->storeAs('public/Documentos/'.$info->matricula. '/'.'Documentos_Oficiales/',$filename);
+                        $file->storeAs('../public/Documentos/'.$info->matricula. '/'.'Documentos_Oficiales/',$filename);
                         $fileModel = new App\documentosoficiales;
                         $fileModel->name = $filename;
                         $fileModel->size = $filesize;
                         $fileModel->matriculaalumn = $info->matricula;
-                        $fileModel->location = 'public/Documentos/'.$info->matricula. '/'.'Documentos_Oficiales/'.$filename;
+                        $fileModel->location = '../public/Documentos/'.$info->matricula. '/'.'Documentos_Oficiales/'.$filename;
                         
                     
                    
