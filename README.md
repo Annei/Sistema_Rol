@@ -6,7 +6,8 @@
 * `composer install`
 * `cp .env.example .env`
 * `php artisan key:generate`
-*  Agrefgar info de db a *.env*
+*  Agregar info de db a *.env*
+* `composer require org.majkel/dbase` Instalar la libreria para los dbfs
 * `php artisan migrate` migrar las tablas
 * `php artisan db:seed` migrar datos
 * `php artisan serve` empezar el proyecto
